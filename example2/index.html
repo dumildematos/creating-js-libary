@@ -1,24 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Library</title>
     <script src="./library.js"></script>
-    <script>
-        window.onload = function(){
-            console.log($('span').html());
-            console.log($('span').attr('class'));
-            console.log($('span').attr('new-attribute','value').html())
-            
-            $('span').on('click', function(event){
-                console.log(event);
-            });
-        }
-    </script>
+
 </head>
 <body>
-    <span class="myClass">Hello World</span>
+
+    <script>
+        window.onload = function(){
+            console.log($('article').html());
+            console.log($('article').attr('id'));
+            console.log($('h2').attr('data-title','h2-title').html())
+
+            $('article').on('click', function(event){
+                console.log(event);
+            });
+            
+        }
+    </script>
+
+    <article id="post-box" class="post-item">
+        <header class="post-header">
+            <h2>Title</h2>
+        </header>
+        <section class="post-body">
+            <p> 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil at laborum veniam optio! 
+                Iusto, magnam optio minima, laborum praesentium eveniet id illo ullam provident deserunt 
+                asperiores? Beatae nemo harum exercitationem!
+            </p>
+        </section>
+    </article>
+
 </body>
 </html>
